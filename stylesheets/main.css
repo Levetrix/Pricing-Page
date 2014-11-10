@@ -444,6 +444,11 @@ dd {
 
 /*       Custom        */
 /* line 138, ../sass/main.scss */
+body {
+  font-family: "Open Sans";
+}
+
+/* line 142, ../sass/main.scss */
 .wrapper {
   width: 1004px;
   margin: 0 auto;
@@ -453,7 +458,7 @@ dd {
   font-size: 14px;
 }
 
-/* line 147, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 #content {
   margin-bottom: 27px;
   overflow: hidden;
@@ -466,7 +471,7 @@ dd {
   overflow: hidden;
 }
 
-/* line 159, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 .price-container {
   display: block;
   text-align: center;
@@ -474,7 +479,7 @@ dd {
   margin: 0 auto;
   margin-top: 4rem;
 }
-/* line 166, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .price-container > .category-container {
   width: 30%;
   background-color: #323232;
@@ -488,7 +493,7 @@ dd {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 175, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .price-container > .category-container > h2 {
   margin: 0;
   background-color: #66b9e3;
@@ -506,7 +511,7 @@ dd {
   -webkit-border-top-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 190, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 .price-container > .category-container > span {
   display: inline-block;
   margin: .5rem;
@@ -514,42 +519,52 @@ dd {
   color: #999;
   font-family: "Open Sans";
 }
-/* line 199, ../sass/main.scss */
+/* line 203, ../sass/main.scss */
 .price-container > .category-container > p {
   display: block;
   font-size: 1.35rem;
   font-family: "Open Sans";
   margin: 0;
 }
-/* line 205, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .price-container > .category-container > p > span {
   font-size: 3rem;
   line-height: 1em;
 }
-/* line 212, ../sass/main.scss */
+/* line 216, ../sass/main.scss */
 .price-container > .category-container > .benefit {
   text-align: center;
   padding: .5rem;
   border-bottom: 1px solid #888;
   font-family: "Open Sans";
 }
-/* line 220, ../sass/main.scss */
+/* line 224, ../sass/main.scss */
 .price-container > .category-container > button {
   display: block;
   border: 1px solid #66b9e3;
   width: 150px;
   margin: 2rem auto;
   font-family: "Open Sans";
-  padding: .5rem;
+  font-weight: 200;
+  font-size: 1.1rem;
+  padding-top: .5rem;
+  padding-bottom: .55rem;
   background-color: transparent;
   color: #fff;
 }
+/* line 237, ../sass/main.scss */
+.price-container > .category-container > button:focus {
+  border: 1px solid #66b9e3;
+  -webkit-box-shadow: 0, 0, 0, 0;
+  -moz-box-shadow: 0, 0, 0, 0;
+  box-shadow: 0, 0, 0, 0;
+}
 
-/* line 234, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 .more-info {
   position: relative;
   width: 86.5%;
-  margin: 3rem auto;
+  margin: 2.5rem auto;
   min-height: 400px;
   background-color: #323232;
   -webkit-border-radius: 4px;
@@ -557,27 +572,93 @@ dd {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  z-index: 1;
 }
-/* line 243, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .more-info:before {
   display: block;
   position: absolute;
-  top: -10px;
-  left: 50px;
+  top: -15px;
+  left: 100px;
   content: "";
-  background-color: #3c5346;
-  z-index: -1;
+  background-color: #323232;
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transform: skew(15deg, 5deg);
-  -moz-transform: skew(15deg, 5deg);
-  -ms-transform: skew(15deg, 5deg);
-  -o-transform: skew(15deg, 5deg);
-  transform: skew(15deg, 5deg);
+  -webkit-transform: rotate(45deg) skew(0deg);
+  -moz-transform: rotate(45deg) skew(0deg);
+  -ms-transform: rotate(45deg) skew(0deg);
+  -o-transform: rotate(45deg) skew(0deg);
+  transform: rotate(45deg) skew(0deg);
+}
+/* line 270, ../sass/main.scss */
+.more-info > .info {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+/* line 277, ../sass/main.scss */
+.more-info > .info.selected {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 281, ../sass/main.scss */
+.more-info > .info .two-thirds {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 66%;
+  height: 100%;
+  margin: 0;
+  padding: 0 .5rem;
+  display: inline-block;
+  border-right: 1px solid #888;
+  vertical-align: top;
+}
+/* line 291, ../sass/main.scss */
+.more-info > .info .two-thirds p {
+  text-align: left;
+  -webkit-columns: 15px 2;
+  -moz-columns: 15px 2;
+  -ms-columns: 15px 2;
+  -o-columns: 15px 2;
+  columns: 15px 2;
+}
+/* line 297, ../sass/main.scss */
+.more-info > .info .one-third {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33%;
+  height: 100%;
+  margin: 0;
+  padding: 0 .5rem;
+  display: inline-block;
+  border-right: 1px solid #888;
+  vertical-align: top;
+}
+/* line 308, ../sass/main.scss */
+.more-info > .info .one-third p {
+  text-align: center;
+  -webkit-columns: 15px 1;
+  -moz-columns: 15px 1;
+  -ms-columns: 15px 1;
+  -o-columns: 15px 1;
+  columns: 15px 1;
+}
+/* line 314, ../sass/main.scss */
+.more-info > .info .last {
+  border: none;
+}
+/* line 318, ../sass/main.scss */
+.more-info > .info h2 {
+  display: block;
+  padding: 1.5rem 0 1rem 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Open Sans";
+  font-weight: 200;
+  font-size: 1.35rem;
+  color: #fff;
 }

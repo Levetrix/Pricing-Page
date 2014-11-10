@@ -135,6 +135,10 @@ dd { padding: 0 0 .75em 1em }
 
 /*       Custom        */
 
+body {
+	font-family:"Open Sans";
+}
+
 .wrapper {
 	width: 1004px;
 	margin: 0 auto;
@@ -223,9 +227,17 @@ dd { padding: 0 0 .75em 1em }
 			width:150px;
 			margin:2rem auto;
 			font-family:"Open Sans";
-			padding:.5rem;
+			font-weight:200;
+			font-size:1.1rem;
+			padding-top:.5rem;
+			padding-bottom:.55rem;
 			background-color:transparent;
 			color:#fff;
+			
+			&:focus {
+				border:1px solid $blue;
+				@include box-shadow(0,0,0,0);
+			}
 		}
 	}
 	
@@ -234,29 +246,88 @@ dd { padding: 0 0 .75em 1em }
 .more-info {
 	position:relative;
 	width:86.5%;
-	margin:3rem auto;
+	margin:2.5rem auto;
 	min-height:400px;
 	background-color:$charcoal;
 	@include border-radius($radius);
-	z-index:1;
 
 	&:before {
 		display:block;
 		position:absolute;
-		top:-10px;
-		left:50px;
+		top:-15px;
+		left:100px;
 		content:"";
-		background-color:$green;
-		z-index:-1;
+		background-color:$charcoal;
 		width:50px;
 		height:50px;
-		@include rotate(45deg); 
-		@include skew(15deg);
+		//@include rotate(45deg); 
+		//@include skew(15deg);
 		//@include simple-transform(,45deg,,,15deg,,,);
-		//@include rotate(45deg) skew(15deg);
+		@include transform(rotate(45deg) skew(0deg));
 		
 	}
+	
+	& > .info {
+		@include opacity(0);
+		position:absolute;
+		height:100%;
+		width:100%;
+		color:#fff;
+		
+		&.selected {
+			@include opacity(1);
+		}
+		
+		& .two-thirds {
+			@include box-sizing(border-box);
+			width:66%;
+			height:100%;
+			margin:0;
+			padding:0 .5rem;
+			display:inline-block;
+			border-right:1px solid #888;
+			vertical-align:top;
+			
+			& p {
+				text-align:left;
+				@include columns(15px 2);
+			}
+		}
+		
+		& .one-third {
+			@include box-sizing(border-box);
+			width:33%;
+			height:100%;
+			margin:0;
+			padding:0 .5rem;
+			display:inline-block;
+			border-right:1px solid #888;
+			vertical-align:top;
+			
+		
+			& p {
+				text-align:center;
+				@include columns(15px 1);
+			}
+		}
+		
+		& .last {
+			border:none;
+		}
+		
+		& h2 {
+			display:block;
+			padding:1.5rem 0 1rem 0;
+			margin:0;
+			text-align:center;
+			font-family:"Open Sans";
+			font-weight:200;
+			font-size:1.35rem;
+			color:#fff;
+		}
+	}	
 }
+
 
 
 
