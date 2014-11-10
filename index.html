@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Scholarships</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css" />
+	<script src="js/vendor/jquery-2.1.1.js"></script>
+	<script src="js/vendor/jquery-ui-1.11.0.js"></script>
+	<script type="text/javascript" src="//is.byu.edu/site/resources/lead_submit.js"></script>
+
+    <script type="text/javascript">
+		var debug = false;
+		attachForm("#contactForm",".clickhere", function( data, textStatus, jqXHR ){
+			if(debug){console.log("ajax connection done.")};
+			//	This is an example of a simple thing you could use to create a new element after your form. Placing a "placeholder" element provides you a natural way to move/place the response data where you want it. For flexibility of design, the way you've done it here is actually better. Therefore this is commented out.
+			//$('<div id="form-response">' + data.message + '</div>').insertAfter($("#contactForm"));
+			$("#form-submit").html('<img src="img/green-check-mark.png" class="form-success" />Thank you for your feedback! We appreciate your willingness to share your thoughts with us.').addClass("form-success");
+		}, false, debug);	//	The last two parameters are optional and here are set to their default values. They govern an optional setting if you supply null for the handler function and rely on the default setting there, and the debug setting which needs to be true to include debug information in the console.
+	</script>
+	
+</head>
+<body>
+	<div class="wrapper" id="content">
+		<form name="Scholarship Form" id="contactForm">
+			<h1>Scholarship Application</h1>
+			<span>Complete this application to have your student considered for a BYU&nbsp;Independent&nbsp;Study scholarship.
+				Students can qualify for free or reduced tuition in any <a target="_blank" href="http://is.byu.edu/site/courses/index.cfm#university=false|high-school=on|middle-school=on|continuing-education=false|ig=on|online=on|paper=on">Middle School or High School course</a>.
+			</span>
+			<h2>Counselor Information</h2>
+			<div>
+				<h4>Name:</h4>
+				<input class="contactAreaQuarter" type="text" placeholder="Kyle Jones" name="name" id="name" required >
+			</div>	 
+			<div>
+				<h4>Email:</h4>
+				<input class="contactAreaQuarter" type="email" placeholder="kyle.jones@example.com" name="email" id="email" required >
+			</div>
+			<div>
+				<h4>School Name:</h4>
+				<input type="text" placeholder="Example High School" name="school" id="school" required >
+			</div>
+			<div>
+				<h4>Phone:</h4>
+				<input type="tel" placeholder="(222)-222-2222" name="phone" id="phone" required >
+			</div>
+			<h2>Student Information</h2>
+			<div>
+				<h4>BYU NetID:</h4>
+				<input type="text" placeholder="Student123" name="identity" id="netID" required >
+			</div>
+			<div>
+				<p>Prior to sending this form, please ensure your student has a current BYU NetID. This is done by going to the <a target="_blank" href="http://is.byu.edu/site/">elearn.byu.edu</a> and clicking on the "Login" button.</p>
+			</div>	 
+			<div>
+				<h4>Course:</h4>
+				<input type="text" placeholder="ACC-200 Principles of Accounting" name="course" id="course" required >
+			</div>
+			<div>
+				<p>Be sure to select the correct course category and corresponding course number.</p>
+			</div>
+			<div class="GPA">
+				<h4>Academic Merit:</h4>
+				<span>GPA:</span><input type="number" placeholder="3.33" name="GPA" id="GPA" required >
+			</div>
+			<div class="tall floatRight">
+				<h4>Recommendation:</h4>
+				<textarea name="message" id="message" placeholder="Please explain why your student should qualify for either academic or financial scholarship."></textarea>
+			</div>
+			<div class="tall">
+				<h4>Financial Needs:</h4>
+				<p><input type="radio" value="Free" name="Needs" id="Needs"><span>Student Qualifies for Free Lunch</span></p>
+				<p><input type="radio" value="Reduced" name="Needs" id="Needs"><span>Student Qualifies for Reduced Lunch</span></p>
+				<p><input type="radio" value="No Assistance" name="Needs" id="Needs"><span>Student did not apply for Free/Reduced Lunch</span></p>		
+			</div>
+			
+			<div class="submitButton clickhere">SUBMIT</div>
+			<div id="form-submit"><!-- This is where the response from the form submission code will be placed after they submit. --></div>
+			<input type="hidden" id="form-id" name="form" value="Scholarship Form">
+			<input type="hidden" id="send_email_to_marketing-id" name="send-email-to-marketing" value="true">
+		</form>
+	</div>
+	<script src="js/catalog-data.js"></script>
+</body>
+</html>
