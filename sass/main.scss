@@ -7,13 +7,16 @@
     &:-ms-input-placeholder { @content; }
     &::-webkit-input-placeholder { @content; } 
 }
-
+ 
 @import "compass";
+@import "compass/css3";
 
-$OpenSans: "OpenSans", "OpenSans_IE";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+$OpenSans: "OpenSans Test";
 $OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
-@include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf"));
+@include font-face("OpenSans Test", font-files("../../fonts/OpenSans-Bold.ttf", "../../fonts/OpenSans-Regular.ttf", "../../fonts/OpenSans-regular.ttf"));
 @include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
 @include font-face("OpenSansLtCn", font-files("../../fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
@@ -29,12 +32,14 @@ $white: #f9f9f9;
 $blue: #66B9E3;
 $charcoal: #323232;
 
+$radius:4px;
+
 $med-gutter:5.86rem;
 $small-gutter:2.31rem;
 $half:22.44rem;
 
 /* BYU Template Stylesheet
-* Last Updated: 22 Sep 2011
+* Last Updated: 22 Sep 2011 
 * Written by: BYU Web Community
 * web.byu.edu  
 */
@@ -156,7 +161,7 @@ dd { padding: 0 0 .75em 1em }
 	text-align:center;
 	width:95%;
 	margin:0 auto;
-	margin-top:8rem; 
+	margin-top:4rem; 
 
 	& > .category-container {
 		width:30%;
@@ -165,34 +170,41 @@ dd { padding: 0 0 .75em 1em }
 		vertical-align:top;
 		color:white;
 		padding:0;
+		@include border-radius(4px);
 		
 		& > h2 {
 			margin:0;
-			background-color:$yellow;
+			background-color:$blue;
 			display:block;
 			padding:1rem 0;
+			color:#444;
 			text-align:center;
 			font-size:1.35rem;
-			font-family:$OpenSans;
+			font-family:"Open Sans";
+			font-weight:400;
+			@include border-top-left-radius($radius);
+			@include border-top-right-radius($radius);
 			
 		}
 		
 		& > span {
 			display:inline-block;
 			margin:.5rem;
-			font-size:.95rem;
+			font-size:.8rem;
 			color:#999;
-			font-family:$OpenSans;
-						
+			font-family:"Open Sans";
+						 
 		}
 		
 		& > p {
 			display:block;
 			font-size:1.35rem;
-			font-family:$OpenSans;
+			font-family:"Open Sans";
+			margin:0;
 			
 			& > span {
-				font-size:2.2rem;
+				font-size:3rem;
+				line-height:1em;
 				//font-family:;
 			}			
 		}
@@ -201,7 +213,7 @@ dd { padding: 0 0 .75em 1em }
 			text-align:center;
 			padding:.5rem;
 			border-bottom:1px solid #888;
-			font-family:$OpenSans;
+			font-family:"Open Sans";
 			
 		}
 		
@@ -209,12 +221,43 @@ dd { padding: 0 0 .75em 1em }
 			display:block;
 			border:1px solid $blue;
 			width:150px;
-			margin:1rem auto;
-			font-family:$OpenSans;
+			margin:2rem auto;
+			font-family:"Open Sans";
+			padding:.5rem;
+			background-color:transparent;
+			color:#fff;
 		}
 	}
 	
 }
+
+.more-info {
+	position:relative;
+	width:86.5%;
+	margin:3rem auto;
+	min-height:400px;
+	background-color:$charcoal;
+	@include border-radius($radius);
+	z-index:1;
+
+	&:before {
+		display:block;
+		position:absolute;
+		top:-10px;
+		left:50px;
+		content:"";
+		background-color:$green;
+		z-index:-1;
+		width:50px;
+		height:50px;
+		@include rotate(45deg); 
+		@include skew(15deg);
+		//@include simple-transform(,45deg,,,15deg,,,);
+		//@include rotate(45deg) skew(15deg);
+		
+	}
+}
+
 
 
 

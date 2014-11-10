@@ -4,7 +4,7 @@
 	<condition property="sass_exec_file" value="C:\\Ruby200-x64\\bin\\sass.bat" else="sass" >
 		<os family="windows" />
 	</condition>
-	<condition property="compass_exec_file" value="C:\\Ruby200-x64\\bin\\compass.bat" else="compass" >
+	<condition property="compass_exec_file" value="C:\\Ruby200-x64\\bin\\compass.bat " else="compass" >
 		<os family="windows" />
 	</condition>
 	
@@ -31,6 +31,7 @@
 	<target name="compass.compile">
 		<exec executable="${compass_exec_file}" dir="${basedir}">
 			<arg value="compile" />
+			<arg value="--force" />
 		</exec>
 		<eclipse.refreshLocal resource="xa/public" depth="infinite"/>
 	</target>
