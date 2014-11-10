@@ -8,6 +8,18 @@
     &::-webkit-input-placeholder { @content; } 
 }
 
+@import "compass";
+
+$OpenSans: "OpenSans", "OpenSans_IE";
+$OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
+
+@include font-face("OpenSans", font-files("../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf", "../../fonts/OpenSans-regular.ttf"));
+@include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLtCn", font-files("../../fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
+@include font-face("OpenSans_IE", font-files("../../fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
+
+
 $green: #3c5346;
 $red: #872633;
 $yellow: #dfb655;
@@ -139,132 +151,70 @@ dd { padding: 0 0 .75em 1em }
 	overflow: hidden;
 }
 
-.floatRight{
-	float:right;
-}
+.price-container {
+	display:block;
+	text-align:center;
+	width:95%;
+	margin:0 auto;
+	margin-top:8rem; 
 
-.wrapper form {
-	& > h1 {
-		margin-left:#{$med-gutter/2};
-	}
-	
-	& > h2 {
-		margin:#{$small-gutter/2} #{$med-gutter/2};
-		margin-top:$small-gutter;
-		font-size:2em;	
-	}
-	
-	& span {
-		display:inline-block;
-		margin:#{$small-gutter/2} #{$med-gutter/2};
-		max-width:#{$half*1.5 + $med-gutter};
-		line-height:1.5em;
-		font-size:14px;
-	}
-	
-	& > div.tall {
-		max-height:100rem;	
-		
-		& p input {
-			width:initial;
-			height:initial;
-		}
-		
-		& p span {
-			margin:0;
-			padding:0;
-			vertical-align:top;
-			padding-left:8px;
-			line-height:1em;
-			font-size:1.15em;
-			position:absolute;
-		}		
-		
-		& textarea {
-			width:100%;
-			box-sizing:border-box;
-			min-height:14rem;
-			margin-top:.35rem;
-		}
-	}
-	
-	& > div {
-		//background-color: rgba($red,.3);
-		width:$half;
-		max-height:4rem;
-		overflow:visible;
-		margin:#{$med-gutter/4} #{$med-gutter/2};
+	& > .category-container {
+		width:30%;
+		background-color:$charcoal;
 		display:inline-block;
 		vertical-align:top;
+		color:white;
+		padding:0;
 		
-		&.GPA {
-			
-			& > span {
-				margin-left:0;
-				margin-right:#{$med-gutter/8};
-			}
-			
-			& > input {
-				display:inline-block;
-				width:65px;
-				min-height: #{$small-gutter};
-								
-			}
-		}
-		& > h4 {
-			font-size:1.6em;
-			line-height:1em;
+		& > h2 {
 			margin:0;
-			font-weight:400;
+			background-color:$yellow;
+			display:block;
+			padding:1rem 0;
+			text-align:center;
+			font-size:1.35rem;
+			font-family:$OpenSans;
+			
 		}
 		
-		& > input,select {
-			width:100%;
-			border: 1px solid #aaa;
-			box-sizing:border-box;
-			min-height:$small-gutter;
-			font-size:1.15em;
-			margin:0;
-			margin-top:.35em;
-			padding-left:10px;
+		& > span {
+			display:inline-block;
+			margin:.5rem;
+			font-size:.95rem;
+			color:#999;
+			font-family:$OpenSans;
+						
 		}
 		
 		& > p {
-			padding-top:11px;
-			position:relative;
+			display:block;
+			font-size:1.35rem;
+			font-family:$OpenSans;
+			
+			& > span {
+				font-size:2.2rem;
+				//font-family:;
+			}			
 		}
-	}	
-	
-	& div.submitButton {
-		display:block;
-		max-width:102px;
-		clear:both;
-		border:1px solid #888;
-		font-size:1.25em;
-		line-height:1em;
-		font-weight:200;
-		color:#555;
-		padding:10px 18px;
-		box-sizing:border-box;
-		width:initial;
-		margin-left:auto;
-		margin-right:auto;
-		cursor:pointer;
 		
-		&:hover {
-			border:1px solid #aaa;
-			color:#7b7b7b;
-			background-color:rgba(220,220,220,.05);
+		& > .benefit {
+			text-align:center;
+			padding:.5rem;
+			border-bottom:1px solid #888;
+			font-family:$OpenSans;
+			
+		}
+		
+		& > button {
+			display:block;
+			border:1px solid $blue;
+			width:150px;
+			margin:1rem auto;
+			font-family:$OpenSans;
 		}
 	}
+	
 }
-
-
-
-
-
-
-
 
 
 
