@@ -559,9 +559,25 @@ body {
   -moz-box-shadow: 0, 0, 0, 0;
   box-shadow: 0, 0, 0, 0;
 }
-
+/* line 242, ../sass/main.scss */
+.price-container > .category-container > button:hover {
+  border: 1px solid #fff;
+}
 /* line 246, ../sass/main.scss */
-.more-info {
+.price-container > .category-container > button a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+/* line 255, ../sass/main.scss */
+#more-info {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.45s;
+  -moz-transition: opacity 0.45s;
+  -o-transition: opacity 0.45s;
+  transition: opacity 0.45s;
   position: relative;
   width: 86.5%;
   margin: 2.5rem auto;
@@ -573,12 +589,16 @@ body {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 254, ../sass/main.scss */
-.more-info:before {
+/* line 265, ../sass/main.scss */
+#more-info.visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 269, ../sass/main.scss */
+#more-info:before {
   display: block;
   position: absolute;
   top: -15px;
-  left: 100px;
   content: "";
   background-color: #323232;
   width: 50px;
@@ -588,71 +608,92 @@ body {
   -ms-transform: rotate(45deg) skew(0deg);
   -o-transform: rotate(45deg) skew(0deg);
   transform: rotate(45deg) skew(0deg);
+  -webkit-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out;
 }
-/* line 270, ../sass/main.scss */
-.more-info > .info {
+/* line 287, ../sass/main.scss */
+#more-info.info-secondary-education:before {
+  left: 100px;
+}
+/* line 295, ../sass/main.scss */
+#more-info.info-university:before {
+  left: 370px;
+}
+/* line 303, ../sass/main.scss */
+#more-info.info-personal-enrichment:before {
+  left: 635px;
+}
+/* line 309, ../sass/main.scss */
+#more-info > .info {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
   height: 100%;
   width: 100%;
   color: #fff;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
-/* line 277, ../sass/main.scss */
-.more-info > .info.selected {
+/* line 317, ../sass/main.scss */
+#more-info > .info.selected {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 281, ../sass/main.scss */
-.more-info > .info .two-thirds {
+/* line 321, ../sass/main.scss */
+#more-info > .info .two-thirds {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 66%;
   height: 100%;
   margin: 0;
-  padding: 0 .5rem;
+  padding: 0 1rem;
   display: inline-block;
   border-right: 1px solid #888;
   vertical-align: top;
 }
-/* line 291, ../sass/main.scss */
-.more-info > .info .two-thirds p {
+/* line 331, ../sass/main.scss */
+#more-info > .info .two-thirds p {
   text-align: left;
-  -webkit-columns: 15px 2;
-  -moz-columns: 15px 2;
-  -ms-columns: 15px 2;
-  -o-columns: 15px 2;
-  columns: 15px 2;
+  -webkit-columns: 15px 1;
+  -moz-columns: 15px 1;
+  -ms-columns: 15px 1;
+  -o-columns: 15px 1;
+  columns: 15px 1;
+  width: calc(50% - 1rem);
 }
-/* line 297, ../sass/main.scss */
-.more-info > .info .one-third {
+/* line 338, ../sass/main.scss */
+#more-info > .info .one-third {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 33%;
   height: 100%;
   margin: 0;
-  padding: 0 .5rem;
+  padding: 0 1rem;
   display: inline-block;
   border-right: 1px solid #888;
   vertical-align: top;
 }
-/* line 308, ../sass/main.scss */
-.more-info > .info .one-third p {
-  text-align: center;
+/* line 349, ../sass/main.scss */
+#more-info > .info .one-third p {
+  text-align: left;
   -webkit-columns: 15px 1;
   -moz-columns: 15px 1;
   -ms-columns: 15px 1;
   -o-columns: 15px 1;
   columns: 15px 1;
 }
-/* line 314, ../sass/main.scss */
-.more-info > .info .last {
+/* line 355, ../sass/main.scss */
+#more-info > .info .last {
   border: none;
 }
-/* line 318, ../sass/main.scss */
-.more-info > .info h2 {
+/* line 359, ../sass/main.scss */
+#more-info > .info h2 {
   display: block;
   padding: 1.5rem 0 1rem 0;
   margin: 0;

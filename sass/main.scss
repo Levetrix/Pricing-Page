@@ -166,8 +166,8 @@ body {
 	width:95%;
 	margin:0 auto;
 	margin-top:4rem; 
-
-	& > .category-container {
+	
+		& > .category-container {
 		width:30%;
 		background-color:$charcoal;
 		display:inline-block;
@@ -238,24 +238,38 @@ body {
 				border:1px solid $blue;
 				@include box-shadow(0,0,0,0);
 			}
+			
+			&:hover {
+				border:1px solid #fff;
+			}
+			
+			& a {
+				text-decoration:none;
+				color:#fff;
+				width:100%;
+			}
 		}
 	}
-	
 }
 
-.more-info {
+#more-info {
+	@include opacity(0);
+	@include transition(opacity .45s);
 	position:relative;
 	width:86.5%;
 	margin:2.5rem auto;
 	min-height:400px;
 	background-color:$charcoal;
 	@include border-radius($radius);
+	
+	&.visible{
+		@include opacity(1);
+	}
 
 	&:before {
 		display:block;
 		position:absolute;
 		top:-15px;
-		left:100px;
 		content:"";
 		background-color:$charcoal;
 		width:50px;
@@ -264,7 +278,32 @@ body {
 		//@include skew(15deg);
 		//@include simple-transform(,45deg,,,15deg,,,);
 		@include transform(rotate(45deg) skew(0deg));
+		@include transition(left .4s ease-in-out);
 		
+	}
+	
+	&.info-secondary-education{
+	
+		&:before {
+		left:100px;
+			
+		}
+	}
+	
+	&.info-university{
+	
+		&:before {
+		left:370px;
+			
+		}
+	}
+	
+	&.info-personal-enrichment{
+	
+		&:before {
+		left:635px;
+			
+		}
 	}
 	
 	& > .info {
@@ -273,6 +312,7 @@ body {
 		height:100%;
 		width:100%;
 		color:#fff;
+		@include transition(opacity .5s);
 		
 		&.selected {
 			@include opacity(1);
@@ -283,14 +323,15 @@ body {
 			width:66%;
 			height:100%;
 			margin:0;
-			padding:0 .5rem;
+			padding:0 1rem;
 			display:inline-block;
 			border-right:1px solid #888;
 			vertical-align:top;
 			
 			& p {
 				text-align:left;
-				@include columns(15px 2);
+				@include columns(15px 1);
+				width:calc(50% - 1rem);
 			}
 		}
 		
@@ -299,14 +340,14 @@ body {
 			width:33%;
 			height:100%;
 			margin:0;
-			padding:0 .5rem;
+			padding:0 1rem;
 			display:inline-block;
 			border-right:1px solid #888;
 			vertical-align:top;
 			
 		
 			& p {
-				text-align:center;
+				text-align:left;
 				@include columns(15px 1);
 			}
 		}
