@@ -13,14 +13,14 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
-$OpenSans: "OpenSans Test";
+$OpenSans: "OpenSans", "OpenSans_IE";
 $OpenSansLt: "OpenSansLt", "OpenSansLt_IE";
 
-@include font-face("OpenSans Test", font-files("../../fonts/OpenSans-Bold.ttf", "../../fonts/OpenSans-Regular.ttf", "../../fonts/OpenSans-regular.ttf"));
-@include font-face("OpenSansLt", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
-@include font-face("OpenSansLt_IE", font-files("../../fonts/opensans-light-webfont.ttf", "../../fonts/opensans-light-webfont.woff", "../../fonts/opensans-light-webfont.eot", "../../fonts/opensans-light-webfont.svg"));
-@include font-face("OpenSansLtCn", font-files("../../fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
-@include font-face("OpenSans_IE", font-files("../../fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
+@include font-face("OpenSans", font-files("//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf", "//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf"));
+@include font-face("OpenSansLt", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLt_IE", font-files("//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot", "//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg"));
+@include font-face("OpenSansLtCn", font-files("//is.byu.edu/site/resources/fonts/OpenSans-CondLight.ttf", "examples/bgrove.otf"));
+@include font-face("OpenSans_IE", font-files("//is.byu.edu/site/resources/fonts/opensans-regular-webfont.eot", "examples/bgrove.otf"));
 
 
 $green: #3c5346;

@@ -2,28 +2,28 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @CHARSET "ISO-8859-1";
 @font-face {
-  font-family: "OpenSans Test";
-  src: url('/stylesheets/fonts/../../fonts/OpenSans-Bold.ttf') format('truetype'), url('/stylesheets/fonts/../../fonts/OpenSans-Regular.ttf') format('truetype'), url('/stylesheets/fonts/../../fonts/OpenSans-regular.ttf') format('truetype');
+  font-family: "OpenSans";
+  src: url(//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf) format('truetype'), url(//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf) format('truetype'), url(//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf) format('truetype'), url(//is.byu.edu/site/resources/fonts/OpenSans-regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: "OpenSansLt";
-  src: url('/stylesheets/fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.woff') format('woff'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.svg') format('svg');
+  src: url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf) format('truetype'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff) format('woff'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot) format('embedded-opentype'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg) format('svg');
 }
 
 @font-face {
   font-family: "OpenSansLt_IE";
-  src: url('/stylesheets/fonts/../../fonts/opensans-light-webfont.ttf') format('truetype'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.woff') format('woff'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.eot') format('embedded-opentype'), url('/stylesheets/fonts/../../fonts/opensans-light-webfont.svg') format('svg');
+  src: url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.ttf) format('truetype'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.woff) format('woff'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.eot) format('embedded-opentype'), url(//is.byu.edu/site/resources/fonts/opensans-light-webfont.svg) format('svg');
 }
 
 @font-face {
   font-family: "OpenSansLtCn";
-  src: url('/stylesheets/fonts/../../fonts/OpenSans-CondLight.ttf') format('truetype'), url('/stylesheets/fonts/examples/bgrove.otf') format('opentype');
+  src: url(//is.byu.edu/site/resources/fonts/OpenSans-CondLight.ttf) format('truetype'), url('/stylesheets/fonts/examples/bgrove.otf') format('opentype');
 }
 
 @font-face {
   font-family: "OpenSans_IE";
-  src: url('/stylesheets/fonts/../../fonts/opensans-regular-webfont.eot') format('embedded-opentype'), url('/stylesheets/fonts/examples/bgrove.otf') format('opentype');
+  src: url(//is.byu.edu/site/resources/fonts/opensans-regular-webfont.eot) format('embedded-opentype'), url('/stylesheets/fonts/examples/bgrove.otf') format('opentype');
 }
 
 /* BYU Template Stylesheet
